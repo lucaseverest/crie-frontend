@@ -31,14 +31,16 @@ const InputBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
     <FormControl isInvalid={!!error}>
       {!!label && <FormLabel htmlFor={name} color="purple.500">{label}</FormLabel>}
 
-      <InputGroup align="center" display="flex">
-        { !!remixIcon && <InputLeftElement
+      <InputGroup>
+        { !!remixIcon && <InputLeftElement height="100%"
           pointerEvents="none"
-          children={<Icon as={remixIcon} color="purple.500" />}
+          children={<Icon as={remixIcon} color="purple.500" fontSize="20" />}
         />}
+        
         <ChakraInput
           name={name}
           id={name}
+          fontSize="0.9rem"
           focusBorderColor="purple.500"
           borderRadius="xl"
           // backgroundColor={backgroundColor}
